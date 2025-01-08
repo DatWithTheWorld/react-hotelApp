@@ -92,15 +92,29 @@
       "!**/dist/**",
       "!**/build/**",
       "!vite.config.ts",
-      "!**/coverage/**"
+      "!**/coverage/**",
+      "!src/components/ui/**",
+      "!src/stories/**"
     ],
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "setup-test.ts",
-      "vite-env.d.ts"
+      "vite-env.d.ts",
+      "src/components/ui/",
+      "src/stories/"
     ],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
-    }
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/src/components/ui/",
+      "<rootDir>/src/stories/"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/src/components/ui/",
+      "/src/stories/"
+    ]
   }
 }

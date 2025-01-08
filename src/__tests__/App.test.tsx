@@ -2,8 +2,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import App from '../App';
 
-jest.mock('../App');
-
 describe('App Component', () => {
   test('renders correctly', () => {
     render(<App />);
@@ -36,7 +34,6 @@ describe('App Component', () => {
     const infoText = screen.getByText(/click on the vite and react logos to learn more/i);
     expect(infoText).toBeInTheDocument();
     
-    // Tìm kiếm văn bản thông qua một mẫu đơn giản
     const editText = screen.getByText(/edit/i);
     const codeText = screen.getByText(/src\/app.tsx/i);
     const saveText = screen.getByText(/and save to test hmr/i);

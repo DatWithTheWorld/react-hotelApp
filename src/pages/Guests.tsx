@@ -1,30 +1,31 @@
-import { Box, Heading, TableRoot, TableHeader, TableBody, TableRow, TableColumnHeader, TableCell, Button } from "@chakra-ui/react";
+import React from "react";
+import { Table, Heading, Box, Button} from "@chakra-ui/react";
 
 const Guests = () => (
   <Box ml="250px" p={8}>
     <Heading mb={6}>Guests</Heading>
-    <TableRoot variant={"line"}>
-      <TableHeader>
-        <TableRow>
-          <TableColumnHeader>Name</TableColumnHeader>
-          <TableColumnHeader>Email</TableColumnHeader>
-          <TableColumnHeader>Phone</TableColumnHeader>
-          <TableColumnHeader>Actions</TableColumnHeader>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        <TableRow>
-          <TableCell>John Doe</TableCell>
-          <TableCell>john.doe@example.com</TableCell>
-          <TableCell>+123456789</TableCell>
-          <TableCell>
+    <Table.Root>
+      <Table.Header>
+        <Table.Row>
+          <Table.ColumnHeader>Name</Table.ColumnHeader>
+          <Table.ColumnHeader>Email</Table.ColumnHeader>
+          <Table.ColumnHeader>Phone</Table.ColumnHeader>
+          <Table.ColumnHeader>Actions</Table.ColumnHeader>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        <Table.Row>
+          <Table.ColumnHeader>John Doe</Table.ColumnHeader>
+          <Table.ColumnHeader>john.doe@example.com</Table.ColumnHeader>
+          <Table.ColumnHeader>+123456789</Table.ColumnHeader>
+          <Table.ColumnHeader>
             <Button size="sm" colorScheme="blue">
               Edit
             </Button>
-          </TableCell>
-        </TableRow>
-      </TableBody>
-    </TableRoot>
+          </Table.ColumnHeader>
+        </Table.Row>
+      </Table.Body>
+    </Table.Root>
   </Box>
 );
 
