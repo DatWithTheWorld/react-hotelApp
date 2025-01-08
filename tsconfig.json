@@ -1,0 +1,25 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "composite": true,
+    "emitDeclarationOnly": false,
+    "noEmit": true,
+    "types": ["jest","node", "@testing-library/jest-dom"],
+    "allowImportingTsExtensions": true,
+  },
+  "include": [
+    "src/**/*",
+    "src/declarations.d.ts",
+    "src/test-utils.ts"
+  ]
+}
