@@ -1,7 +1,7 @@
 import React from "react";
 import { Table, Heading, Box, Button} from "@chakra-ui/react";
 
-const Guests = () => (
+const Guests: React.FC = () => (
   <Box ml="250px" p={8}>
     <Heading mb={6}>Guests</Heading>
     <Table.Root>
